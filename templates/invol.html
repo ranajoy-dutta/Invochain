@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Light</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/register.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/css/register.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	<div class="container-mid ">
+		{% if flag == "1" %}
+		<img src="../static/images/on.png" title="Light On" alt="Light On">
+		{% else %}
+		<img src="../static/images/off.png" title="Light Off" alt="Light Off">
+		{% endif %}
+		<div class="container-login100-form-btn">
+			<div class="wrap-login100-form-btn" style="width: 70vh; height: 50px;">
+				<div class="login100-form-bgbtn"></div>
+					<a href="/switchh"><button type="submit" class="login100-form-btn">
+						{% if flag == "1" %}
+						Turn Off
+						{% else %}
+						Turn On
+						{% endif %}
+					</button></a>
+				</div>
+		</div>
+		
+	</div>
+
+	<div class="msg">
+		<span>Bulb status is being fetched from Database</span>
+	</div>
+</body>
+</html>
